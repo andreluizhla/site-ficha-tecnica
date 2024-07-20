@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha Técnica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Site Ficha Técnica</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Criador de Ficha Técnica</h1>
+    </header>
+    <main>
+        <section class="conteudo">
+
+        </section>
+        <secction id="criaPDF">
+            <div id="formularios">
+                <input type="text" id="texto">
+                <input type="file" name="sim" id="sim" id="arquivo">
+                <button type="submit" onclick="verificar()">Enviar</button>
+            </div>
+
+            <!--
+                O que tem em uma ficha tecnica:
+                    Nome do prato/drink e codigo
+                    ingredientes por ordem de uso
+                    rendimento
+                    tempo de confecção
+                    Custo da receita (valor da porção)
+                    Equipamentos e utensílios utilizados 
+                    Modo de preparo
+                    anotaçoes 
+            -->
+        </secction>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script><!--
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    -->
+    <script src="script.js"></script>
 </body>
 </html>
