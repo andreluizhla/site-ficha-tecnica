@@ -1,21 +1,29 @@
 const texto = document.getElementById('texto');
-const arquivo = document.getElementById('arquivo').files
-//const jsPDF = window.jspdf
+const arquivo = document.getElementById('arquivo');
+const { jsPDF } = window.jspdf;
 
 function verificar() {
-    if (texto.value != 0 ){
-        gerarPDF()
+    if (texto.value.trim() !== "") {
+        gerarPDF();
+    } else {
+        alert("Por favor, insira algum texto.");
     }
 }
 
 function gerarPDF() {
-    var doc = new jsPDF({
-        orientation : 'portrait',
+    const doc = new jsPDF({
+        orientation: 'portrait',
         unit: 'mm',
         format: 'a4'
-    })
-    doc.text(texto.value, 10, 10)
+    });
 
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const text = texto.value;
+    const textWidth = doc.getTextWidth(text);
+    const textX = (pageWidth - textWidth) / 2;
 
-    doc.save('arquivo.pdf')
+    doc.setFontSize(30);
+    doc.text(text, textX, 10);
+
+    doc.save('arquivo.pdf');
 }

@@ -13,16 +13,15 @@
     </header>
     <main>
         <section class="conteudo">
-
         </section>
-        <secction id="criaPDF">
+        <section id="criaPDF"> <!-- Corrigido secction para section -->
             <div id="formularios">
-                <input type="text" id="texto">
-                <input type="file" name="sim" id="sim" id="arquivo">
+                <textarea name="texto" id="texto" cols="50" rows="10">Digite o seu texto aqui...</textarea>
+                <input type="file" name="sim" id="arquivo"> <!-- Removido segundo id -->
                 <button type="submit" onclick="verificar()">Enviar</button>
             </div>
-
-            <!--
+        </section>
+        <!--
                 O que tem em uma ficha tecnica:
                     Nome do prato/drink e codigo
                     ingredientes por ordem de uso
@@ -33,15 +32,11 @@
                     Modo de preparo
                     anotaçoes 
             -->
-        </secction>
     </main>
     <footer>
-
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script><!--
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
-    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
