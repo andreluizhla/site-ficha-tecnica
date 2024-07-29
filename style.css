@@ -129,13 +129,11 @@ ul.resposta{
     font-weight: normal;
 }
 
-a{
-    color: var(--azul-claro);
+footer a{
+    color: var(--verde);
+    font-weight: bolder;
 }
 
-a:visited{
-    color: var(--verde);
-}
 /* Estilos do Rodapé */
 footer {
     background-color: var(--azul-escuro);
