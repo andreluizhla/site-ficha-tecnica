@@ -5,7 +5,6 @@ function generatePDF() {
     const name = document.getElementById('name').value.trim();
     const yield = document.getElementById('yield').value.trim();
     const time = document.getElementById('time').value.trim();
-    const cost = document.getElementById('cost').value.trim();
     const ingredients = document.getElementById('ingredients').value.trim();
     const equipment = document.getElementById('equipment').value.trim();
     const preparation = document.getElementById('preparation').value.trim();
@@ -14,8 +13,36 @@ function generatePDF() {
     const imageInput = document.getElementById('image');
 
     // Verificar se os campos obrigatórios estão preenchidos
-    if (!name || !yield || !time || !cost || !ingredients || !equipment || !preparation) {
-        alert('Por favor, preencha todos os campos obrigatórios.');
+    if (!name || !yield || !time || !ingredients || !equipment || !preparation) {
+        var campos = [
+            {id: 'name'},
+            {id: 'yield'},
+            {id: 'time'},
+            {id: 'ingredients'},
+            {id: 'equipment'},
+            {id: 'preparation'}
+        ]
+
+        const erros = []
+
+        campos.forEach(campo => {
+            const valor = document.getElementById(campo.id).value.trim()
+            if (!valor){
+                erros.push(campo.id)
+            }
+        })
+
+        campos.forEach(campo => {
+            const campoElemento = document.getElementById(campo.id)
+            if (erros.includes(campo.id)) {
+                campoElemento.classList.add('erro')
+                campoElemento.classList.remove('ok')
+            } else {
+                campoElemento.classList.add('ok')
+                campoElemento.classList.remove('erro')
+            }
+        })
+        alert('Atenção: Complete os campos restantes para prosseguir')
         return;
     }
 
@@ -40,8 +67,8 @@ function generatePDF() {
         // Adicionar tabela com número de porções, tempo de preparo e custo
         doc.autoTable({
             startY: startY,
-            head: [['Rendimento', 'Tempo de Preparo', 'Custo da Receita']],
-            body: [[`${yield} Porções`, `${time} horas`, `R$ ${cost.tolocaleString('pt-BR', {style:'currency', currency:"BRL"})}`]],
+            head: [['Rendimento', 'Tempo de Preparo']],
+            body: [[`${yield} Porções`, `${time} horas`]],
             theme: 'grid',
             margin: imageInput.files.length > 0 ? { right: 70 } : { right: 10 },
             styles: tableStyle

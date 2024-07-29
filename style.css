@@ -1,0 +1,151 @@
+/* Estilos Gerais */
+@charset "UTF-8";
+
+@font-face{
+    font-family: "Montserrat", sans-serif;
+    src: url(fontes/Montserrat-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --azul-claro: #c0ecfb;
+    --branco: #ffffff;
+    --verde: #abedab;
+    --cinza: #dedddd;
+    --azul-escuro: #154575;
+    --preto: #000000;
+    --fonte-montserrat: "Montserrat", sans-serif;
+}
+
+/* Estilos Responsivos */
+@media screen and (min-width: 315px) {
+    section {
+        margin: 10px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    section {
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    section {
+        margin: 40px;
+    }
+}
+
+/* Estilos do Corpo */
+body {
+    min-width: 320px;
+    max-width: 1000px;
+    margin: auto;
+    background-image: linear-gradient(125deg, var(--azul-claro), var(--azul-escuro));
+    font-family: var(--fonte-montserrat);
+}
+
+/* Estilos do Cabeçalho */
+header {
+    padding: 30px 0;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.83);
+}
+
+header h1 {
+    text-align: center;
+    padding: 10px;
+    color: var(--branco);
+}
+
+main {
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.87);
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 30px 30px 0 0;
+}
+
+
+/* Estilos do Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--azul-escuro);
+}
+
+.erro{
+    border: 5px solid #ec2e2e93;
+}
+
+.ok{
+    border: 3px solid var(--verde);
+}
+
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+    margin-bottom: 25px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: var(--fonte-montserrat);
+}
+
+form button {
+    background-color: var(--verde);
+    color: var(--preto);
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--fonte-montserrat);
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--azul-claro);
+}
+
+ol{
+    margin-block-start: 1em;
+    padding-inline-start: 40px;
+    font-weight: bold;
+}
+
+ul.resposta{
+    margin-block-start: 1em;
+    margin-block-end: 2em;
+    list-style-type: '\21B3\0020\0020';
+    padding-inline-start: 40px;
+    font-weight: normal;
+}
+
+a{
+    color: var(--azul-claro);
+}
+
+a:visited{
+    color: var(--verde);
+}
+/* Estilos do Rodapé */
+footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    border-radius: 0 0 30px 30px;
+    box-shadow: rgba(44, 44, 44, 0.537) 4px 4px 4px;
+    min-width: 320px;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: var(--fonte-montserrat);
+}

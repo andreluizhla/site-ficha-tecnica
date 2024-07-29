@@ -22,43 +22,38 @@
             <h2>Preencha os detalhes da sua receita</h2>
             <form id="recipeForm">
                 <div class="form-group">
-                    <label for="name">Nome do Prato/Drink e Código:</label>
+                    <label for="name">Nome do Prato/Drink e Código (Respectivamente):</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="yield">Rendimento:</label>
+                    <label for="yield">Rendimento (em Porções):</label>
                     <input type="text" id="yield" name="yield" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="time">Tempo de Confecção:</label>
+                    <label for="time">Tempo de Confecção (em Horas):</label>
                     <input type="text" id="time" name="time" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="cost">Custo da Receita (Valor da Porção):</label>
-                    <input type="text" id="cost" name="cost" required>
-                </div>
-                
-                <div class="form-group">
                     <label for="ingredients">Ingredientes (por ordem de uso):</label>
-                    <textarea id="ingredients" name="ingredients" rows="4" cols="50" required></textarea>
+                    <textarea id="ingredients" name="ingredients" rows="10" cols="50" required></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="equipment">Equipamentos e Utensílios Utilizados:</label>
-                    <textarea id="equipment" name="equipment" rows="4" cols="50" required></textarea>
+                    <textarea id="equipment" name="equipment" rows="7" cols="50" required></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="preparation">Modo de Preparo:</label>
-                    <textarea id="preparation" name="preparation" rows="4" cols="50" required></textarea>
+                    <textarea id="preparation" name="preparation" rows="20" cols="50" required></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="notes">Anotações/Observações:</label>
-                    <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+                    <textarea id="notes" name="notes" rows="5" cols="50"></textarea>
                 </div>
 
                 <div class="form-group">
@@ -76,16 +71,23 @@
         </section>
         <section id="ajuda">
             <h2>Ajuda e FAQs</h2>
-            <p><strong>Como usar este formulário?</strong></p>
-            <p>Preencha todos os campos obrigatórios com as informações da sua receita. Clique no botão "Gerar PDF" para baixar sua ficha técnica.</p>
-            <p><strong>Por que algumas informações são obrigatórias?</strong></p>
-            <p>As informações obrigatórias garantem que sua ficha técnica esteja completa e detalhada, facilitando a reprodução da receita.</p>
-            <p><strong>O que fazer se eu não tiver uma imagem?</strong></p>
-            <p>A imagem do prato é opcional, mas adiciona um valor visual à sua ficha técnica. Se você não tiver uma imagem, você ainda pode gerar o PDF sem problemas.</p>
-        </section>
+            <ol>
+                <li>Como usar este formulário?</li>
+                <ul class="resposta">
+                    <li>Preencha todos os campos obrigatórios com as informações da sua receita. Clique no botão "Gerar PDF" para baixar sua ficha técnica.</li>
+                </ul>
+                <li>Por que algumas informações são obrigatórias?</li>
+                <ul class="resposta">
+                    <li>As informações obrigatórias garantem que sua ficha técnica esteja completa e detalhada, facilitando a reprodução da receita.</li>
+                </ul>
+                <li>O que fazer se eu não tiver uma imagem?</li>
+                <ul class="resposta">
+                    <li>A imagem do prato é opcional, mas adiciona um valor visual à sua ficha técnica. Se você não tiver uma imagem, você ainda pode gerar o PDF sem problemas.</li>
+                </ul>
+            </ol>
     </main>
     <footer>
-        <p>&copy; 2024 Site Ficha Técnica. Todos os direitos reservados.</p>
+        <p>Site Ficha Técnica, feito pelo <a href="https://andreluizhla.github.io/repositorio-oficial" target="_blank">&copy;André Luiz</a>.</p>
     </footer>
 </body>
 </html>
