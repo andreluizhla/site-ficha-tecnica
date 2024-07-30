@@ -129,10 +129,20 @@ ul.resposta{
     font-weight: normal;
 }
 
-footer a{
-    color: var(--verde);
-    font-weight: bolder;
+a {
+    text-decoration: none;
+    transition-duration: 750ms;
 }
+
+a:hover{
+    color: #72dbfe;
+    text-decoration: underline;
+}
+
+a::before{
+    content: '\1F517';
+}
+
 
 /* Estilos do Rodapé */
 footer {
