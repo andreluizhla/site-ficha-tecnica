@@ -1,8 +1,9 @@
 function generatePDF() {
     const { jsPDF } = window.jspdf;
-
+    
     // Pegar os valores dos inputs do formulário
     const name = document.getElementById('name').value.trim();
+    const code = document.getElementById('code').value.trim();
     const yield = document.getElementById('yield').value.trim();
     const time = document.getElementById('time').value.trim();
     const ingredients = document.getElementById('ingredients').value.trim();
@@ -11,7 +12,7 @@ function generatePDF() {
     const notes = document.getElementById('notes').value.trim();
     const garnish = document.getElementById('garnish').value.trim();
     const imageInput = document.getElementById('image');
-
+    
     // Verificar se os campos obrigatórios estão preenchidos
     if (!name || !yield || !time || !ingredients || !equipment || !preparation) {
         var campos = [
@@ -53,7 +54,7 @@ function generatePDF() {
     doc.setFontSize(16);
     doc.text('Ficha Técnica de Receita', 105, 10, null, null, 'center');
     doc.setFontSize(12);
-    doc.text(`Código: ${name}`, 105, 20, null, null, 'center');
+    doc.text(`Prato: ${name} Código: ${code}`, 105, 20, null, null, 'center');
 
     // Definir estilo padrão para as tabelas
     const tableStyle = {
@@ -127,9 +128,14 @@ function generatePDF() {
                 styles: tableStyle
             });
         }
-
+        console.log(code)
         // Salvar o PDF
-        doc.save('ficha-tecnica-receita.pdf');
+        if (code == ''){
+            doc.save(`ficha-tecnica-${name}.pdf`);
+        }
+        else{
+            doc.save(`ficha-tecnica-${code}-${name}.pdf`);
+        }
     };
 
     // Verificar se a imagem foi carregada

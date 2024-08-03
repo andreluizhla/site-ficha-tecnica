@@ -91,6 +91,7 @@ form label {
 }
 
 form input[type="text"],
+form input[type="number"],
 form textarea,
 form input[type="file"] {
     margin-bottom: 25px;
@@ -149,7 +150,7 @@ a::before{
 
 /* Estilos do Rodapé */
 footer {
-    background-color: darkcyan;
+    background-color: #2783dfae;
     color: var(--branco);
     border-radius: 0 0 30px 30px;
     box-shadow: rgba(44, 44, 44, 0.537) 4px 4px 4px;
